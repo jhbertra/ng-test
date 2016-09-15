@@ -2,15 +2,22 @@ general:
   artifacts:
     - "coverage"
 
+machine:
+  environment:
+
+
 dependencies:
   pre:
-    - npm install -g npm && npm install -g angular-cli
-  override:
-    - npm install
+    - npm install -g npm
+
+test:
+  post:
+    - npm lint
 
 deployment:
   staging:
     branch: master
     commands:
-      - ng build
-      - scp dist serverpilot@159.203.42.60:~/apps/ng-test/public
+      - npm run build
+      - cd dist
+      - scp -r . serverpilot@159.203.42.60:~/apps/ng-test/public
