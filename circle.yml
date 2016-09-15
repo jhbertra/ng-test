@@ -19,5 +19,6 @@ deployment:
     branch: master
     commands:
       - npm run build
-      - cd dist
       - scp -r . serverpilot@159.203.42.60:~/apps/ng-test/public
+        pwd:
+          dist
