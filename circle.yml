@@ -1,5 +1,5 @@
 dependencies:
   pre:
-    - npm install -g angular-cligit
+    - npm install -g angular-cli
   override:
     - npm install --no-optional
