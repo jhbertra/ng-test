@@ -2,10 +2,6 @@ general:
   artifacts:
     - "coverage"
 
-machine:
-  environment:
-
-
 dependencies:
   pre:
     - npm install -g npm
