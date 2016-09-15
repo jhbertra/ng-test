@@ -9,7 +9,8 @@ dependencies:
     - npm install
 
 deployment:
-  production:
+  staging:
     branch: master
     commands:
-      - ng github-pages:deploy
+      - ng build
+      - scp dist serverpilot@159.203.42.60:~/apps/ng-test/public
