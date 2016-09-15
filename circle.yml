@@ -1,5 +1,5 @@
 dependencies:
   pre:
-    - npm install -g angular-cli --no-optional
+    -  npm install -g npm && npm install -g angular-cli
   override:
-    - npm install --no-optional
+    - npm install
