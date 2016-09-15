@@ -8,6 +8,8 @@ dependencies:
   override:
     - npm install
 
-deploy:
+deployment:
   production:
-    - ng github-pages:deploy
+    branch: master
+    commands:
+      - ng github-pages:deploy
