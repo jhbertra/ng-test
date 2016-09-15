@@ -1,5 +1,13 @@
+general:
+  artifacts:
+    - "coverage"
+
 dependencies:
   pre:
-    -  npm install -g npm && npm install -g angular-cli
+    - npm install -g npm && npm install -g angular-cli
   override:
     - npm install
+
+deploy:
+  production:
+    - ng github-pages:deploy
